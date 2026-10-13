@@ -23,6 +23,15 @@
     .contact-section{padding-top:0;padding-bottom:76px}.contact-card{background:radial-gradient(750px 350px at 100% 100%,rgba(133,92,222,.19),transparent),linear-gradient(120deg,#10303b,#121e34);border:1px solid rgba(119,221,215,.22);border-radius:24px;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:48px 53px}.contact-card h2{margin-top:11px;font-size:40px}.contact-card p{font-size:14px;color:#bdcfdc;max-width:620px;margin:15px 0 0} .contact-actions{display:flex;gap:10px;flex-wrap:wrap}.footer{border-top:1px solid var(--line)} .footer-inner{padding-block:28px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:12px}.footer-links{display:flex;gap:21px;flex-wrap:wrap} .footer-links a:hover{color:var(--accent)}
     dialog.video-dialog{background:#08131f;color:var(--text);border:1px solid rgba(96,229,213,.35);padding:0;width:min(1100px,96vw);max-width:unset;border-radius:18px;box-shadow:0 40px 120px #0009} dialog::backdrop{background:rgba(0,6,12,.82);backdrop-filter:blur(6px)} .dialog-head{display:flex;justify-content:space-between;align-items:center;padding:13px 17px;border-bottom:1px solid var(--line);font-size:13px;font-weight:750}.dialog-close{border:1px solid var(--line);border-radius:50%;background:#152b37;color:white;width:34px;height:34px;font-size:20px}.dialog-body{background:#03080d} .dialog-body video{display:block;width:100%;max-height:75vh;background:#000} .dialog-note{padding:10px 16px;color:var(--muted);font-size:12px}
     @media(max-width:1000px){.hero-grid{gap:35px;grid-template-columns:1fr .84fr}.hero h1{font-size:55px}.floating-note{right:-3%}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-item img{height:200px}} @media(max-width:760px){.container{width:min(100% - 32px,var(--max))}.header-inner{min-height:70px}.menu-toggle{display:block} nav{display:none;position:absolute;top:70px;right:0;left:0;background:#0a1a29;border-bottom:1px solid var(--line);padding:20px 22px;flex-direction:column;align-items:stretch;gap:19px}nav.open{display:flex} .hero-grid{display:flex;flex-direction:column;padding-block:45px 50px;gap:35px;align-items:stretch}.hero h1{font-size:clamp(41px,10.5vw,62px)}.hero p{font-size:16px}.hero-portrait-wrap{max-width:460px;margin:0 auto}.hero-portrait{aspect-ratio:5/4.7}.floating-note{right:0}.hero-under .container{gap:10px}.micro{font-size:11px}section{padding-block:63px}.section-top{display:block}.section-top p{margin-top:17px}.projects-grid,.case-grid,.trading-card,.skills-content{grid-template-columns:1fr}.trading-diagram{padding:26px}.services-row{grid-template-columns:1fr}.about-row{grid-template-columns:85px 1fr;gap:20px}.about-photo{height:85px;width:85px}.about-row p{grid-column:1/-1}.contact-card{padding:30px;display:block}.contact-card h2{font-size:32px}.contact-actions{margin-top:24px}.gallery-item img{height:155px}} @media(max-width:460px){.gallery-grid{grid-template-columns:1fr 1fr;gap:9px}.gallery-item img{height:105px}.gallery-item figcaption{padding:9px;font-size:10px}.gallery-item figcaption strong{font-size:11px}.project-text{padding:20px}.project-text h3{font-size:21px}.diagram-flow{gap:4px}.diagram-node{font-size:10px;padding:13px 5px}.about-row h2{font-size:23px}.contact-card h2{font-size:30px}} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+    /* YouTube is loaded only after explicit visitor interaction. */
+    .dialog-body{min-height:260px;display:grid;place-items:center}
+    .video-consent{padding:clamp(25px,5vw,54px);max-width:670px;text-align:center}
+    .video-consent h3{margin:0 0 12px;font-size:clamp(21px,3vw,29px)}
+    .video-consent p{color:#c4d4df;font-size:14px;line-height:1.75;margin:0 auto 22px;max-width:540px}
+    .video-consent .external-note{font-size:12px;color:var(--muted);margin-top:18px}
+    .video-consent a{text-decoration:underline;text-underline-offset:3px;color:var(--accent)}
+    .youtube-frame{width:100%;aspect-ratio:16/9;display:block;border:0;background:#000}
   </style>
 </head>
 <body>
@@ -60,12 +69,12 @@
         <div class="section-top"><div><div class="section-kicker">01 / Featured work</div><h2 id="project-title">Watch the automation<br>in action.</h2></div><p>Two working demonstrations, shown through actual workflow recordings rather than mock-up interfaces.</p></div>
         <div class="projects-grid">
           <article class="project-card">
-            <button type="button" class="project-media video-open" data-video="assets/invoice-demo.mp4" data-title="AI Invoice Processing & Validation" aria-label="Play invoice processing project video"><img src="assets/invoice-cover.webp" alt="Make invoice automation workflow with Google Gemini and validation branches" width="1200" height="675" loading="lazy"><span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo</span></button>
-            <div class="project-text"><div class="project-num">01 / AI document workflow</div><h3>AI Invoice Processing<br>& Validation</h3><p>From incoming invoice to extracted data, quality checks, duplicate detection and organized records.</p><div class="tags"><span>Make</span><span>Gemini AI</span><span>Google Drive</span><span>Google Sheets</span></div><div class="project-links"><button type="button" class="video-open" data-video="assets/invoice-demo.mp4" data-title="AI Invoice Processing & Validation">Watch demo ↗</button><a href="#case-invoice">How it works ↓</a></div></div>
+            <button type="button" class="project-media video-open" data-youtube="jN4eNEJCWQ4" data-title="AI Invoice Processing & Validation" aria-label="Play invoice processing project video"><img src="assets/invoice-cover.webp" alt="Make invoice automation workflow with Google Gemini and validation branches" width="1200" height="675" loading="lazy"><span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo</span></button>
+            <div class="project-text"><div class="project-num">01 / AI document workflow</div><h3>AI Invoice Processing<br>& Validation</h3><p>From incoming invoice to extracted data, quality checks, duplicate detection and organized records.</p><div class="tags"><span>Make</span><span>Gemini AI</span><span>Google Drive</span><span>Google Sheets</span></div><div class="project-links"><button type="button" class="video-open" data-youtube="jN4eNEJCWQ4" data-title="AI Invoice Processing & Validation">Watch demo ↗</button><a href="#case-invoice">How it works ↓</a></div></div>
           </article>
           <article class="project-card">
-            <button type="button" class="project-media video-open" data-video="assets/crm-demo.mp4" data-title="Intelligent CRM & Sales Automation" aria-label="Play HubSpot CRM automation project video"><img src="assets/crm-cover.webp" alt="n8n workflow showing lead validation, branching and HubSpot integrations" width="1200" height="928" loading="lazy"><span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo</span></button>
-            <div class="project-text"><div class="project-num">02 / CRM & sales workflow</div><h3>Intelligent CRM & Sales<br>Automation</h3><p>New leads are validated, scored, matched with HubSpot contacts and assigned follow-up tasks.</p><div class="tags"><span>n8n</span><span>HubSpot</span><span>JavaScript</span><span>REST API</span></div><div class="project-links"><button type="button" class="video-open" data-video="assets/crm-demo.mp4" data-title="Intelligent CRM & Sales Automation">Watch demo ↗</button><a href="#case-crm">How it works ↓</a></div></div>
+            <button type="button" class="project-media video-open" data-youtube="rCWMjW_kGY0" data-title="Intelligent CRM & Sales Automation" aria-label="Play HubSpot CRM automation project video"><img src="assets/crm-cover.webp" alt="n8n workflow showing lead validation, branching and HubSpot integrations" width="1200" height="928" loading="lazy"><span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo</span></button>
+            <div class="project-text"><div class="project-num">02 / CRM & sales workflow</div><h3>Intelligent CRM & Sales<br>Automation</h3><p>New leads are validated, scored, matched with HubSpot contacts and assigned follow-up tasks.</p><div class="tags"><span>n8n</span><span>HubSpot</span><span>JavaScript</span><span>REST API</span></div><div class="project-links"><button type="button" class="video-open" data-youtube="rCWMjW_kGY0" data-title="Intelligent CRM & Sales Automation">Watch demo ↗</button><a href="#case-crm">How it works ↓</a></div></div>
           </article>
         </div>
         <article class="trading-card" id="trading">
@@ -83,8 +92,8 @@
     </div></div></section>
 
     <section id="details" class="cases" aria-labelledby="details-title"><div class="container"><div class="case-heading"><div><div class="section-kicker">03 / Technical highlights</div><h2 id="details-title">What happens under the hood.</h2></div><span class="keyword">Built, connected and tested</span></div><div class="case-grid">
-      <div class="case" id="case-invoice"><h3>AI invoice workflow</h3><p>Automated intake and structured extraction, followed by validation, duplicate checks and routing to organized cloud records.</p><ul><li>Gmail intake and PDF attachment handling</li><li>Gemini-based invoice data extraction</li><li>Validation, manual review & duplicate checking</li><li>Google Drive archive and Sheets log</li></ul><button class="btn secondary case-btn video-open" type="button" data-video="assets/invoice-demo.mp4" data-title="AI Invoice Processing & Validation">Play walkthrough ▶</button></div>
-      <div class="case" id="case-crm"><h3>CRM & sales workflow</h3><p>Form submissions pass through JavaScript validation, scoring and HubSpot contact matching before updates or new follow-up tasks.</p><ul><li>REST-API requests and token authentication</li><li>Create-or-update contact logic</li><li>Priority-based follow-up tasks</li><li>Process logs and a separate error handler</li></ul><button class="btn secondary case-btn video-open" type="button" data-video="assets/crm-demo.mp4" data-title="Intelligent CRM & Sales Automation">Play walkthrough ▶</button></div>
+      <div class="case" id="case-invoice"><h3>AI invoice workflow</h3><p>Automated intake and structured extraction, followed by validation, duplicate checks and routing to organized cloud records.</p><ul><li>Gmail intake and PDF attachment handling</li><li>Gemini-based invoice data extraction</li><li>Validation, manual review & duplicate checking</li><li>Google Drive archive and Sheets log</li></ul><button class="btn secondary case-btn video-open" type="button" data-youtube="jN4eNEJCWQ4" data-title="AI Invoice Processing & Validation">Play walkthrough ▶</button></div>
+      <div class="case" id="case-crm"><h3>CRM & sales workflow</h3><p>Form submissions pass through JavaScript validation, scoring and HubSpot contact matching before updates or new follow-up tasks.</p><ul><li>REST-API requests and token authentication</li><li>Create-or-update contact logic</li><li>Priority-based follow-up tasks</li><li>Process logs and a separate error handler</li></ul><button class="btn secondary case-btn video-open" type="button" data-youtube="rCWMjW_kGY0" data-title="Intelligent CRM & Sales Automation">Play walkthrough ▶</button></div>
     </div></div></section>
 
     <section id="skills" class="skills" aria-labelledby="skills-title"><div class="container skills-content"><div><div class="section-kicker">04 / Toolkit</div><h2 id="skills-title">The tools behind<br>the systems.</h2></div><div class="skills-grid"><div class="skill-box"><strong>Automation</strong><p>n8n · Make · Triggers · Webhooks</p></div><div class="skill-box"><strong>Development</strong><p>JavaScript · Python · JSON · REST APIs</p></div><div class="skill-box"><strong>Business platforms</strong><p>HubSpot · Gmail · Drive · Sheets</p></div><div class="skill-box"><strong>Reliability</strong><p>Validation · Logging · Error handling</p></div></div></div></section>
@@ -97,7 +106,7 @@
   </main>
   <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Denis Genschel · Automation portfolio</span><div class="footer-links"><a href="#projects">Projects</a><a href="imprint.html">Impressum</a><a href="privacy.html">Datenschutz</a></div></div></footer>
 
-  <dialog id="videoDialog" class="video-dialog" aria-labelledby="dialogTitle"><div class="dialog-head"><span id="dialogTitle">Project walkthrough</span><button class="dialog-close" type="button" aria-label="Close video">×</button></div><div class="dialog-body" id="videoMount"></div><div class="dialog-note">Demo recording · Click play to start · Press Esc to close</div></dialog>
+  <dialog id="videoDialog" class="video-dialog" aria-labelledby="dialogTitle"><div class="dialog-head"><span id="dialogTitle">Project walkthrough</span><button class="dialog-close" type="button" aria-label="Close video">×</button></div><div class="dialog-body" id="videoMount"></div><div class="dialog-note">External video hosted by YouTube · Loaded only after your confirmation · Press Esc to close</div></dialog>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const menuBtn = document.querySelector('.menu-toggle');
@@ -106,22 +115,65 @@
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }));
     const dialog = document.getElementById('videoDialog');
     const mount = document.getElementById('videoMount');
+    const youtubeIds = new Set(['jN4eNEJCWQ4', 'rCWMjW_kGY0']);
+
+    // No YouTube player, iframe, thumbnail or network request is created on page load.
     document.querySelectorAll('.video-open').forEach(btn => btn.addEventListener('click', () => {
-      document.getElementById('dialogTitle').textContent = btn.dataset.title || 'Project walkthrough';
+      const id = btn.dataset.youtube;
+      if (!youtubeIds.has(id)) return;
+      const title = btn.dataset.title || 'Project walkthrough';
+      document.getElementById('dialogTitle').textContent = title;
       mount.replaceChildren();
-      const video = document.createElement('video');
-      video.controls = true; video.playsInline = true; video.preload = 'metadata';
-      const source = document.createElement('source'); source.src = btn.dataset.video; source.type = 'video/mp4';
-      video.appendChild(source); mount.appendChild(video);
-      if (typeof dialog.showModal === 'function') { dialog.showModal(); }
-      else { window.open(btn.dataset.video, '_blank', 'noopener'); return; }
-      video.play().catch(() => {});
+      if (typeof dialog.showModal !== 'function') {
+        // Older browsers: an explicit click opens the video's YouTube page.
+        window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener,noreferrer');
+        return;
+      }
+
+      const consent = document.createElement('div');
+      consent.className = 'video-consent';
+      const heading = document.createElement('h3');
+      heading.textContent = 'Watch the project demonstration';
+      const description = document.createElement('p');
+      description.textContent = 'This video is hosted by YouTube (Google). If you choose to load it, your IP address and technical usage data may be transmitted to Google. The player uses YouTube’s privacy-enhanced mode. No connection to YouTube is made until you confirm.';
+      const loadBtn = document.createElement('button');
+      loadBtn.type = 'button';
+      loadBtn.className = 'btn primary';
+      loadBtn.textContent = 'Load YouTube video ▶';
+      const extra = document.createElement('p');
+      extra.className = 'external-note';
+      extra.append('Read our ');
+      const privacy = document.createElement('a');
+      privacy.href = 'privacy.html';
+      privacy.textContent = 'privacy notice';
+      extra.append(privacy, ' before loading.');
+
+      loadBtn.addEventListener('click', () => {
+        if (!dialog.open) return;
+        const iframe = document.createElement('iframe');
+        iframe.className = 'youtube-frame';
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        iframe.title = title + ' — YouTube video';
+        iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+        mount.replaceChildren(iframe);
+      }, {once:true});
+      consent.append(heading, description, loadBtn, extra);
+      mount.appendChild(consent);
+      dialog.showModal();
+      loadBtn.focus();
     }));
-    function closeDialog(){ const v = mount.querySelector('video'); if(v){v.pause();v.removeAttribute('src');v.load();} mount.replaceChildren(); if(dialog.open)dialog.close(); }
+
+    // Removing the iframe on close stops playback and the embedded session.
+    function closeDialog(){
+      mount.replaceChildren();
+      if (dialog.open) dialog.close();
+    }
     dialog.querySelector('.dialog-close').addEventListener('click', closeDialog);
-    dialog.addEventListener('click', (e) => { if(e.target === dialog)closeDialog(); });
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) closeDialog(); });
     dialog.addEventListener('close', () => mount.replaceChildren());
-    dialog.addEventListener('cancel', () => { const v = mount.querySelector('video'); if (v) v.pause(); });
+    dialog.addEventListener('cancel', () => mount.replaceChildren());
   </script>
 </body>
 </html>
