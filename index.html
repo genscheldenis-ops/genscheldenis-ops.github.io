@@ -134,7 +134,7 @@
           </article>
         </div>
         <article class="project-card trading-feature" id="trading" aria-labelledby="trading-heading">
-          <button class="project-media video-open trading-visual" type="button" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation" aria-label="Play the market-data and algorithmic trading project walkthrough">
+          <button class="project-media video-open trading-visual" type="button" data-video="assets/trading-demo.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation" aria-label="Play the market-data and algorithmic trading project walkthrough">
             <img src="assets/trading-cover.webp" alt="Diagram of the market data logger, timestamped storage, execution testing, Codex-assisted analysis and Expert Advisor running on a New York VPS" width="1600" height="900" loading="lazy">
             <span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo · 3 min</span>
           </button>
@@ -144,7 +144,7 @@
             <p>A custom data-logging and execution-research system built around order-book feeds, broker quotes and millisecond-level timestamps.</p>
             <p>Live order tests reveal observable latency phases and actual fill prices, compared against captured market data. Findings support strategy research and automated Expert Advisors running on a New York VPS.</p>
             <div class="tags"><span>Expert Advisors</span><span>Tick data</span><span>Execution latency</span><span>VPS</span><span>Codex-assisted analysis</span></div>
-            <div class="project-links"><button type="button" class="video-open" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Watch demo ↗</button><a href="#case-trading">Technical details ↓</a></div>
+            <div class="project-links"><button type="button" class="video-open" data-video="assets/trading-demo.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Watch demo ↗</button><a href="#case-trading">Technical details ↓</a></div>
             <div class="project-foot">Independent technical project · Strategy parameters are not disclosed. Test results are not claims of profitability.</div>
           </div>
           <div class="trading-process" aria-label="Trading system workflow">
@@ -175,7 +175,7 @@
         <div class="case-trading-copy"><span class="project-num">03 / Trading & data engineering</span><h3>From millisecond-level data to automated execution</h3>
           <p>Data-logger Expert Advisors collect order-book changes and broker-side quotes in parallel. The VPS environment also supports live execution tests, separating measurable timing stages and recording the broker-confirmed fill price.</p>
           <ul><li>High-volume tick records with millisecond-level timestamps and structured CSV outputs</li><li>Time alignment of order-book information with the broker's market quotes</li><li>Recorded execution phases, actual fill prices and price deviation analysis</li><li>Comparison of confirmed fills with the closest relevant logger snapshots</li><li>Codex-assisted review and development of an automated Expert Advisor</li></ul>
-          <button class="btn secondary case-btn video-open" type="button" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Play technical walkthrough ▶</button>
+          <button class="btn secondary case-btn video-open" type="button" data-video="assets/trading-demo.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Play technical walkthrough ▶</button>
         </div>
         <div class="case-trading-media"><img src="assets/trading-timing.webp" width="1200" height="675" loading="lazy" alt="Recorded execution test with measurable latency stages"><div class="case-media-note">Live test reports · observed execution phases · fill-price comparison</div></div>
       </article>
@@ -204,7 +204,7 @@
     const videoSources = new Set([
       'assets/invoice-demo.mp4',
       'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/crm-demo.mp4',
-      'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4'
+      'assets/trading-demo.mp4'
     ]);
 
     document.querySelectorAll('.video-open').forEach(btn => btn.addEventListener('click', () => {
@@ -227,7 +227,7 @@
       video.preload = 'metadata';
       video.poster = src === 'assets/invoice-demo.mp4'
         ? 'assets/invoice-cover.webp'
-        : src === 'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4'
+        : src === 'assets/trading-demo.mp4'
           ? 'assets/trading-cover.webp'
           : 'assets/crm-cover.webp';
       video.setAttribute('aria-label', title);
