@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08121e">
-  <meta name="description" content="Denis Genschel's automation portfolio: AI invoice processing, n8n & HubSpot CRM workflows, JavaScript, API integrations, and market data automation. Project demos and technical snapshots.">
+  <meta name="description" content="Denis Genschel's automation portfolio: three real project demos covering AI invoice processing, n8n/HubSpot CRM automation and millisecond-level market-data logging, execution testing and algorithmic trading systems.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Denis Genschel — Automation Portfolio">
-  <meta property="og:description" content="Real automation projects, demo videos and workflow walkthroughs. Make, n8n, HubSpot, JavaScript & APIs.">
-  <meta property="og:image" content="https://genscheldenis-ops.github.io/assets/invoice-cover.webp">
+  <meta property="og:description" content="Three automation project demos: AI invoices, n8n/HubSpot CRM and high-precision market data, execution analysis and algorithmic trading.">
+  <meta property="og:image" content="https://genscheldenis-ops.github.io/assets/trading-cover.webp">
   <link rel="canonical" href="https://genscheldenis-ops.github.io/">
   <title>Denis Genschel — Automation Portfolio</title>
   <style>
@@ -61,6 +61,33 @@
       body { background-attachment: scroll; }
       .hero { background: linear-gradient(180deg, rgba(5, 13, 37, .62), rgba(5, 13, 37, .19)); }
     }
+
+    /* Portfolio project 03: cohesive visual integration across the page. */
+    .trading-feature{display:grid;grid-template-columns:1.03fr .97fr;gap:0;margin-top:22px;background:linear-gradient(115deg,rgba(14,31,58,.97),rgba(25,24,67,.93));}
+    .trading-feature .trading-visual{aspect-ratio:auto;height:100%;min-height:356px;border-radius:0;align-self:stretch}
+    .trading-feature .trading-visual img{object-position:50% 50%}
+    .trading-feature .trading-summary{padding:37px 35px 31px;display:flex;flex-direction:column;justify-content:center}
+    .trading-feature .trading-summary h3{font-size:clamp(24px,2.65vw,36px);line-height:1.16;margin-top:11px;margin-bottom:15px}
+    .trading-feature .trading-summary p{font-size:13px;margin-bottom:10px}
+    .trading-feature .trading-summary .tags{margin-top:10px}
+    .trading-feature .trading-summary .project-links{margin-top:19px}
+    .trading-feature .trading-summary .project-foot{margin-top:14px;line-height:1.55}
+    .trading-process{grid-column:1/-1;display:flex;gap:14px;justify-content:space-between;align-items:center;padding:18px 28px;border-top:1px solid rgba(199,234,247,.15);background:rgba(6,12,30,.35);color:#caddeb;font-size:12px}
+    .trading-process strong{color:var(--accent);margin-right:9px;font-size:11px}
+    .trading-process i{font-style:normal;color:#7f90b8}
+    .gallery-item{transition:transform .24s ease,border-color .24s ease}
+    .gallery-item:hover{transform:translateY(-3px);border-color:rgba(96,229,213,.38)}
+    .case-trading{grid-column:1/-1;display:grid;grid-template-columns:1.09fr .91fr;gap:30px;align-items:center;background:linear-gradient(120deg,rgba(13,32,55,.96),rgba(26,29,68,.96));}
+    .case-trading h3{font-size:clamp(22px,2.4vw,30px);margin:10px 0 12px}
+    .case-trading .case-trading-copy>p{font-size:13px;line-height:1.75}
+    .case-trading-media{border:1px solid var(--line);background:#0a1526;border-radius:15px;overflow:hidden}
+    .case-trading-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+    .case-media-note{padding:12px 15px;color:#b3cad8;font-size:11px;line-height:1.5}
+    .services-row{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .service{padding:22px}
+    @media(max-width:920px){.trading-feature{grid-template-columns:1fr}.trading-feature .trading-visual{aspect-ratio:16/9;min-height:0}.trading-feature .trading-summary{padding:28px 25px}.trading-process{flex-wrap:wrap;justify-content:center;gap:9px 14px}.services-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.case-trading{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services-row{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.trading-feature .trading-summary{padding:24px 21px}.trading-feature .trading-summary h3{font-size:26px}.trading-process{padding:14px 18px;justify-content:flex-start}.trading-process i{display:none}.trading-process span{width:calc(50% - 9px)}.services-row{grid-template-columns:1fr}.case-trading{padding:21px}.case-trading-media{margin-top:3px}}
   </style>
 </head>
 <body>
@@ -78,8 +105,8 @@
         <div>
           <div class="eyebrow">Denis Genschel · Automation portfolio</div>
           <h1 id="hero-title">Business processes, automated.<br><em>Projects you can watch.</em></h1>
-          <p>A hands-on portfolio of AI invoice processing, CRM automation and market-data systems — with real workflow demos, screenshots and technical insights.</p>
-          <div class="hero-keywords" aria-label="Portfolio contents"><span class="keyword">2 project videos</span><span class="keyword">Real workflow screenshots</span><span class="keyword">Make · n8n · JavaScript · APIs</span></div>
+          <p>Three hands-on projects: AI invoice workflows, CRM automation and a data-intensive trading system — including millisecond-level logging, live execution tests and autonomous Expert Advisors.</p>
+          <div class="hero-keywords" aria-label="Portfolio contents"><span class="keyword">3 project demos</span><span class="keyword">Real workflow screenshots</span><span class="keyword">Make · n8n · Market Data · APIs</span></div>
           <div class="actions"><a class="btn primary" href="#projects">Explore my projects ↓</a><a class="btn secondary" href="#contact">Discuss a role or project ↗</a></div>
         </div>
         <div class="hero-portrait-wrap">
@@ -95,7 +122,7 @@
 
     <section class="projects" id="projects" aria-labelledby="project-title">
       <div class="container">
-        <div class="section-top"><div><div class="section-kicker">01 / Featured work</div><h2 id="project-title">Watch the automation<br>in action.</h2></div><p>Two working demonstrations, shown through actual workflow recordings rather than mock-up interfaces.</p></div>
+        <div class="section-top"><div><div class="section-kicker">01 / Featured work</div><h2 id="project-title">Watch the automation<br>in action.</h2></div><p>Three technical projects, presented through actual workflow recordings, data files and test results.</p></div>
         <div class="projects-grid">
           <article class="project-card">
             <button type="button" class="project-media video-open" data-video="assets/invoice-demo.mp4" data-title="AI Invoice Processing & Validation" aria-label="Play invoice processing project video"><img src="assets/invoice-cover.webp" alt="Make invoice automation workflow with Google Gemini and validation branches" width="1200" height="675" loading="lazy"><span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo</span></button>
@@ -106,36 +133,65 @@
             <div class="project-text"><div class="project-num">02 / CRM & sales workflow</div><h3>Intelligent CRM & Sales<br>Automation</h3><p>New leads are validated, scored, matched with HubSpot contacts and assigned follow-up tasks.</p><div class="tags"><span>n8n</span><span>HubSpot</span><span>JavaScript</span><span>REST API</span></div><div class="project-links"><button type="button" class="video-open" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/crm-demo.mp4" data-title="Intelligent CRM & Sales Automation">Watch demo ↗</button><a href="#case-crm">How it works ↓</a></div></div>
           </article>
         </div>
-        <article class="trading-card" id="trading">
-          <div class="project-text"><div class="project-num">03 / Market data systems</div><h3>Algorithmic Trading &<br>Data Automation</h3><p>API-connected data collection, time-stamped logging, order book analysis and automated trading system development.</p><div class="tags"><span>Python</span><span>Broker APIs</span><span>CSV logging</span><span>Order book data</span></div><div class="project-foot">Technical overview only · Strategy details are not published.</div></div>
-          <div class="trading-diagram" role="img" aria-label="Illustrative system architecture: market feeds to timestamped logs to analysis and monitoring"><div class="diagram-title">Simplified system architecture</div><div class="diagram-flow"><div class="diagram-node">Market feeds<small>Broker · order book</small></div><span class="diagram-arrow">→</span><div class="diagram-node">Data capture<small>Time-stamped logs</small></div><span class="diagram-arrow">→</span><div class="diagram-node">Analysis<small>Signals · monitoring</small></div></div><div class="diagram-footer">Architecture overview — not trading performance data</div></div>
+        <article class="project-card trading-feature" id="trading" aria-labelledby="trading-heading">
+          <button class="project-media video-open trading-visual" type="button" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation" aria-label="Play the market-data and algorithmic trading project walkthrough">
+            <img src="assets/trading-cover.webp" alt="Diagram of the market data logger, timestamped storage, execution testing, Codex-assisted analysis and Expert Advisor running on a New York VPS" width="1600" height="900" loading="lazy">
+            <span class="play" aria-hidden="true"></span><span class="video-badge">▶ Watch project demo · 3 min</span>
+          </button>
+          <div class="project-text trading-summary">
+            <div class="project-num">03 / Market data & execution research</div>
+            <h3 id="trading-heading">High-Precision Market Data &amp; Algorithmic Trading Automation</h3>
+            <p>A custom data-logging and execution-research system built around order-book feeds, broker quotes and millisecond-level timestamps.</p>
+            <p>Live order tests reveal observable latency phases and actual fill prices, compared against captured market data. Findings support strategy research and automated Expert Advisors running on a New York VPS.</p>
+            <div class="tags"><span>Expert Advisors</span><span>Tick data</span><span>Execution latency</span><span>VPS</span><span>Codex-assisted analysis</span></div>
+            <div class="project-links"><button type="button" class="video-open" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Watch demo ↗</button><a href="#case-trading">Technical details ↓</a></div>
+            <div class="project-foot">Independent technical project · Strategy parameters are not disclosed. Test results are not claims of profitability.</div>
+          </div>
+          <div class="trading-process" aria-label="Trading system workflow">
+            <span><strong>01</strong> Capture market data</span><i aria-hidden="true">→</i>
+            <span><strong>02</strong> Log &amp; align timestamps</span><i aria-hidden="true">→</i>
+            <span><strong>03</strong> Test latency &amp; fills</span><i aria-hidden="true">→</i>
+            <span><strong>04</strong> Analyze &amp; automate</span>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="proof" class="gallery-section" aria-labelledby="gallery-title"><div class="container"><div class="section-top"><div><div class="section-kicker">02 / Behind the scenes</div><h2 id="gallery-title">Inside the workflows.</h2></div><p>Selected frames from the project recordings.</p></div><div class="gallery-grid">
+    <section id="proof" class="gallery-section" aria-labelledby="gallery-title"><div class="container"><div class="section-top"><div><div class="section-kicker">02 / Behind the scenes</div><h2 id="gallery-title">Inside the workflows.</h2></div><p>Screenshots from all three project demos — workflows, collected data, execution testing and automation on the VPS.</p></div><div class="gallery-grid">
       <figure class="gallery-item"><img src="assets/invoice-cover.webp" alt="Make automation workflow overview" loading="lazy"><figcaption><strong>Invoice intake</strong>Make · Gmail · Gemini</figcaption></figure>
       <figure class="gallery-item"><img src="assets/invoice-detail.webp" alt="Make workflow branching and duplicate detection" loading="lazy"><figcaption><strong>Duplicate protection</strong>Make · Data Store</figcaption></figure>
       <figure class="gallery-item"><img src="assets/crm-cover.webp" alt="n8n lead validation workflow with branching" loading="lazy"><figcaption><strong>Lead validation</strong>n8n · JavaScript</figcaption></figure>
       <figure class="gallery-item"><img src="assets/crm-detail.webp" alt="HubSpot CRM page showing task and lead management" loading="lazy"><figcaption><strong>CRM follow-ups</strong>HubSpot · API integration</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/trading-cover.webp" alt="High-level diagram linking market-data sources with data logging, research and automated trading" loading="lazy"><figcaption><strong>System overview</strong>Market data · Research · VPS</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/trading-logger.webp" alt="Collected order-book measurements and millisecond-level timestamps in a spreadsheet" loading="lazy"><figcaption><strong>Tick-level data logger</strong>Order book · Broker quotes</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/trading-timing.webp" alt="Live execution test report displaying timing phases and recorded prices" loading="lazy"><figcaption><strong>Execution latency tests</strong>Milliseconds · Actual fills</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/trading-bot.webp" alt="Trading platform chart where automated Expert Advisors run on the VPS" loading="lazy"><figcaption><strong>Automated Expert Advisors</strong>Trading platform · VPS</figcaption></figure>
     </div></div></section>
 
     <section id="details" class="cases" aria-labelledby="details-title"><div class="container"><div class="case-heading"><div><div class="section-kicker">03 / Technical highlights</div><h2 id="details-title">What happens under the hood.</h2></div><span class="keyword">Built, connected and tested</span></div><div class="case-grid">
       <div class="case" id="case-invoice"><h3>AI invoice workflow</h3><p>Automated intake and structured extraction, followed by validation, duplicate checks and routing to organized cloud records.</p><ul><li>Gmail intake and PDF attachment handling</li><li>Gemini-based invoice data extraction</li><li>Validation, manual review & duplicate checking</li><li>Google Drive archive and Sheets log</li></ul><button class="btn secondary case-btn video-open" type="button" data-video="assets/invoice-demo.mp4" data-title="AI Invoice Processing & Validation">Play walkthrough ▶</button></div>
       <div class="case" id="case-crm"><h3>CRM & sales workflow</h3><p>Form submissions pass through JavaScript validation, scoring and HubSpot contact matching before updates or new follow-up tasks.</p><ul><li>REST-API requests and token authentication</li><li>Create-or-update contact logic</li><li>Priority-based follow-up tasks</li><li>Process logs and a separate error handler</li></ul><button class="btn secondary case-btn video-open" type="button" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/crm-demo.mp4" data-title="Intelligent CRM & Sales Automation">Play walkthrough ▶</button></div>
+      <article class="case case-trading" id="case-trading">
+        <div class="case-trading-copy"><span class="project-num">03 / Trading & data engineering</span><h3>From millisecond-level data to automated execution</h3>
+          <p>Data-logger Expert Advisors collect order-book changes and broker-side quotes in parallel. The VPS environment also supports live execution tests, separating measurable timing stages and recording the broker-confirmed fill price.</p>
+          <ul><li>High-volume tick records with millisecond-level timestamps and structured CSV outputs</li><li>Time alignment of order-book information with the broker's market quotes</li><li>Recorded execution phases, actual fill prices and price deviation analysis</li><li>Comparison of confirmed fills with the closest relevant logger snapshots</li><li>Codex-assisted review and development of an automated Expert Advisor</li></ul>
+          <button class="btn secondary case-btn video-open" type="button" data-video="https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4" data-title="High-Precision Market Data & Algorithmic Trading Automation">Play technical walkthrough ▶</button>
+        </div>
+        <div class="case-trading-media"><img src="assets/trading-timing.webp" width="1200" height="675" loading="lazy" alt="Recorded execution test with measurable latency stages"><div class="case-media-note">Live test reports · observed execution phases · fill-price comparison</div></div>
+      </article>
     </div></div></section>
 
-    <section id="skills" class="skills" aria-labelledby="skills-title"><div class="container skills-content"><div><div class="section-kicker">04 / Toolkit</div><h2 id="skills-title">The tools behind<br>the systems.</h2></div><div class="skills-grid"><div class="skill-box"><strong>Automation</strong><p>n8n · Make · Triggers · Webhooks</p></div><div class="skill-box"><strong>Development</strong><p>JavaScript · Python · JSON · REST APIs</p></div><div class="skill-box"><strong>Business platforms</strong><p>HubSpot · Gmail · Drive · Sheets</p></div><div class="skill-box"><strong>Reliability</strong><p>Validation · Logging · Error handling</p></div></div></div></section>
+    <section id="skills" class="skills" aria-labelledby="skills-title"><div class="container skills-content"><div><div class="section-kicker">04 / Toolkit</div><h2 id="skills-title">The tools behind<br>the systems.</h2></div><div class="skills-grid"><div class="skill-box"><strong>Automation</strong><p>n8n · Make · Triggers · Webhooks</p></div><div class="skill-box"><strong>Development</strong><p>JavaScript · Python · JSON · REST APIs</p></div><div class="skill-box"><strong>Business platforms</strong><p>HubSpot · Gmail · Drive · Sheets</p></div><div class="skill-box"><strong>Reliability</strong><p>Validation · Logging · Error handling</p></div><div class="skill-box"><strong>Data engineering</strong><p>Tick-level logging · CSV · Timestamp alignment</p></div><div class="skill-box"><strong>Execution research</strong><p>Fill-price analysis · Latency phases · VPS · EAs</p></div></div></div></section>
 
-    <section id="services" aria-labelledby="services-title"><div class="container"><div class="section-top"><div><div class="section-kicker">05 / How I can help</div><h2 id="services-title">From manual steps<br>to connected systems.</h2></div><p>Available for remote full-time positions and focused paid automation pilot projects.</p></div><div class="services-row"><div class="service"><div class="service-icon">⌘</div><h3>CRM automation</h3><p>Capture leads, sync records and keep follow-ups moving.</p></div><div class="service"><div class="service-icon">▦</div><h3>Invoice & backoffice flows</h3><p>Extract, validate, route and archive recurring documents.</p></div><div class="service"><div class="service-icon">↗</div><h3>API integrations</h3><p>Connect platforms with custom logic and reliable data handling.</p></div></div>
-      <div class="about-row" id="about"><img class="about-photo" src="assets/portrait.webp" alt="Denis Genschel" loading="lazy"><div><div class="section-kicker">06 / About</div><h2>Hi, I'm Denis.</h2></div><p>I design and develop practical workflow automations that connect business systems and reduce repetitive work. My focus is on clear implementation, tested logic and maintainable processes.</p></div>
+    <section id="services" aria-labelledby="services-title"><div class="container"><div class="section-top"><div><div class="section-kicker">05 / How I can help</div><h2 id="services-title">From manual steps<br>to connected systems.</h2></div><p>Available for remote full-time positions and focused paid automation pilot projects.</p></div><div class="services-row"><div class="service"><div class="service-icon">⌘</div><h3>CRM automation</h3><p>Capture leads, sync records and keep follow-ups moving.</p></div><div class="service"><div class="service-icon">▦</div><h3>Invoice & backoffice flows</h3><p>Extract, validate, route and archive recurring documents.</p></div><div class="service"><div class="service-icon">↗</div><h3>API integrations</h3><p>Connect platforms with custom logic and reliable data handling.</p></div><div class="service"><div class="service-icon">◫</div><h3>Data logging & testing</h3><p>Collect time-sensitive data, measure system behavior and build auditable logs.</p></div></div>
+      <div class="about-row" id="about"><img class="about-photo" src="assets/portrait.webp" alt="Denis Genschel" loading="lazy"><div><div class="section-kicker">06 / About</div><h2>Hi, I'm Denis.</h2></div><p>I design automation systems for both business operations and data-intensive technical workflows — from AI-assisted invoice handling and CRM to millisecond-level market-data logging, execution tests and Expert Advisors. My focus is on observable results, tested logic and maintainable processes.</p></div>
     </div></section>
 
-    <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="container"><div class="contact-card"><div><div class="section-kicker">07 / Let's connect</div><h2 id="contact-title">Have a process worth automating?</h2><p>Open to 100% remote roles and small paid pilot projects. Share your workflow, challenge or job opportunity.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:genschel.denis@gmail.com?subject=Automation%20Portfolio%20Enquiry">Email me ↗</a><a class="btn secondary" href="https://github.com/genscheldenis-ops" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
+    <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="container"><div class="contact-card"><div><div class="section-kicker">07 / Let's connect</div><h2 id="contact-title">Have a process worth automating?</h2><p>Open to 100% remote roles and focused paid automation pilots — including system integrations, CRM workflows, data logging and analysis. Share your project or opportunity.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:genschel.denis@gmail.com?subject=Automation%20Portfolio%20Enquiry">Email me ↗</a><a class="btn secondary" href="https://github.com/genscheldenis-ops" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
   <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Denis Genschel · Automation portfolio</span><div class="footer-links"><a href="#projects">Projects</a><a href="imprint.html">Impressum</a><a href="privacy.html">Datenschutz</a></div></div></footer>
 
-  <dialog id="videoDialog" class="video-dialog" aria-labelledby="dialogTitle"><div class="dialog-head"><span id="dialogTitle">Project walkthrough</span><button class="dialog-close" type="button" aria-label="Close video">×</button></div><div class="dialog-body" id="videoMount"></div><div class="dialog-note">Original project recording · Press Esc to close</div></dialog>
+  <dialog id="videoDialog" class="video-dialog" aria-labelledby="dialogTitle"><div class="dialog-head"><span id="dialogTitle">Project walkthrough</span><button class="dialog-close" type="button" aria-label="Close video">×</button></div><div class="dialog-body" id="videoMount"></div><div class="dialog-note">Project recording · Press Esc to close</div></dialog>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const menuBtn = document.querySelector('.menu-toggle');
@@ -147,7 +203,8 @@
     // The video sources are only requested after the visitor opens the corresponding demo.
     const videoSources = new Set([
       'assets/invoice-demo.mp4',
-      'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/crm-demo.mp4'
+      'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/crm-demo.mp4',
+      'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4'
     ]);
 
     document.querySelectorAll('.video-open').forEach(btn => btn.addEventListener('click', () => {
@@ -170,7 +227,9 @@
       video.preload = 'metadata';
       video.poster = src === 'assets/invoice-demo.mp4'
         ? 'assets/invoice-cover.webp'
-        : 'assets/crm-cover.webp';
+        : src === 'https://pub-75876f06dc7c417a906c024fb928b8fb.r2.dev/Trading.mp4'
+          ? 'assets/trading-cover.webp'
+          : 'assets/crm-cover.webp';
       video.setAttribute('aria-label', title);
       const source = document.createElement('source');
       source.src = src;
