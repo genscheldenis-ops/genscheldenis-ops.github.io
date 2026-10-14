@@ -31,6 +31,36 @@
     .video-fallback a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
     .video-error{display:none;padding:10px 16px;color:#ffd0cc;font-size:13px}
     .video-error.visible{display:block}
+
+    /* Portfolio background — light blue / deep blue / violet, inspired by the supplied reference.
+       All videos, project images and interactive elements are unchanged. */
+    body {
+      background-color: #0a1031;
+      background-image:
+        radial-gradient(ellipse 66% 77% at 0% 8%, rgba(99, 219, 255, .85) 0%, rgba(61, 132, 252, .62) 40%, transparent 78%),
+        radial-gradient(ellipse 70% 76% at 100% 14%, rgba(176, 40, 238, .85) 0%, rgba(107, 24, 199, .65) 45%, transparent 79%),
+        radial-gradient(ellipse 78% 77% at 45% 68%, rgba(48, 23, 206, .56) 0%, rgba(34, 21, 108, .28) 58%, transparent 86%),
+        linear-gradient(115deg, #103f83 0%, #172773 37%, #1b0c57 69%, #0b0a29 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    /* Preserve contrast over the brighter parts of the gradient. */
+    .hero {
+      background:
+        radial-gradient(ellipse 52% 35% at 1% 0%, rgba(126, 232, 255, .43) 0%, rgba(64, 159, 252, .20) 54%, transparent 86%),
+        linear-gradient(180deg, rgba(5, 13, 37, .15) 0%, rgba(5, 13, 37, .60) 29%, rgba(5, 13, 37, .61) 79%, rgba(5, 13, 37, .27) 100%);
+    }
+    .projects {
+      background: linear-gradient(180deg, rgba(7, 16, 42, .32), rgba(8, 14, 39, .38));
+    }
+    .skills { background: rgba(7, 16, 39, .48); }
+    .hero-under { background: rgba(7, 15, 39, .31); }
+    .site-header { background: rgba(8, 16, 38, .87); }
+    @media (max-width: 760px) {
+      body { background-attachment: scroll; }
+      .hero { background: linear-gradient(180deg, rgba(5, 13, 37, .62), rgba(5, 13, 37, .19)); }
+    }
   </style>
 </head>
 <body>
